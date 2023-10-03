@@ -320,7 +320,7 @@ async def upload_files(no_docx_file: UploadFile = File(...), xlsx_file: UploadFi
         move_docx_files_to_thank_you_folder(".", "no_amount_completed")
         return JSONResponse(content={
             "message": "Files uploaded successfully and modified",
-            "download_link": "https://doc-no-amount-server.onrender.com/download/completed"
+            "download_link": "https://doc-no-amount-server.onrender.com/download/no_amount_completed"
             }, status_code=200)
     except Exception as e:
          return JSONResponse(content={"error": str(e)}, status_code=500)
